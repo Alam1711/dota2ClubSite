@@ -1,0 +1,75 @@
+<%- include('../partials/header.ejs')%>
+<div class="content">
+  <!-- About Section-->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <!-- About Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-white">
+        <%= event.title%>
+      </h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- About Section Content-->
+      <div class="row">
+        <div class="col-lg-4 ms-auto">
+          <p class="lead">
+            <!-- Desc -->
+            <h3>Event Description:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.details%></p>
+            <!-- Requried Rank -->
+            <h3>Required Rank:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.requiredRank%></p>
+            <!-- Location -->
+            <h3>Location:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.location%></p>
+            <!-- Start Time -->
+            <h3>Start Time:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.startTime%></p>
+            <!-- EndTime -->
+            <h3>End Time:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.endTime%></p>
+            <!-- Start Time -->
+            <h3>Event Description:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.details%></p>
+            <!-- Start Time -->
+            <h3>Event Type:</h3>
+            <p id="event" class="border border-dark font-weight-bold"><%= event.category%></p>
+
+          </p>
+        </div>
+        <div class="col-lg-4 me-auto">
+          <p class="lead">
+            <h3>Picture:</h3>
+            <img
+              class="eventImage"
+              alt="NO picture provided"
+              src="<%= event.image%>"
+              style="width: 100%"
+            />
+            <h6>Posted <%=event.createdAt%> <br>By: <%= event.host.firstName + ' ' +
+              event.host.lastName%></h6>
+          </p>
+        </div>
+        <div class="col-lg-4 me-auto">
+          <p class="lead">
+              <!-- RSVPs -->
+              <h3>RSVPs:</h3>
+              <h6><%= event.rsvp%> RSVP(s)</h6>
+              <!-- Buttons -->
+                <h1 class="content">RSVP HERE!</h1>
+              <form action="/events/<%= event.id%>/rsvp" method="POST" class="new-form" >
+                  <button class="btn btn-success" type="submit" name="response" value="Yes">Yes</button>
+                  <button class="btn btn-danger" type="submit" name="response" value="No">No</button>
+                <button class="btn btn-secondary"type="submit"  name="response" value="Maybe">Maybe</button>
+              </form>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<%- include('../partials/footer.ejs')%>

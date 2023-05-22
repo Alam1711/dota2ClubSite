@@ -1,0 +1,163 @@
+<%- include('../partials/header.ejs')%>
+  <!-- Contact Section-->
+  <div class="content">
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">
+          Editing: <%= event.title%> 
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="container">
+          <!-- Contact Section Form-->
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+    
+            <form action="/events/<%= event.id%>?_method=PUT" method="POST" class="new-form" enctype="multipart/form-data">
+              <table>
+                <div class="form-floating mb-3">
+                <p>
+                  <label for="title">Title</label>
+                  <input type="text" id="title" name="title" value="<%= event.title%>" required/>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="location">Location</label>
+                  <input type="text" id="title" name="location" value="<%= event.location%>" required/>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="category">Event Type</label>
+                  <select name="category" id="category">
+                    <option value="Tournament">Tournament</option>
+                    <option value="Development Course">Development Course</option>
+                  </select>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="requiredRank">Required Rank</label>
+                  <select name="requiredRank" id="requiredRank">
+                    <option value="Herald">Herald</option>
+                    <option value="Guardian">Guardian</option>
+                    <option value="Crusader">Crusader</option>
+                    <option value="Archon">Archon</option>
+                    <option value="Legend">Legend</option>
+                    <option value="Ancient">Ancient</option>
+                    <option value="Divine">Divine</option>
+                    <option value="Immortal">Immortal</option>
+                  </select>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="startTime" id="startTime" name="startTime" required >Start Time</label>
+                  <input type="datetime-local" id="startTime" name="startTime" required/>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="endTime" id="endTime" name="endTime" required>End Time</label>
+                  <input type="datetime-local" id="endTime" name="endTime" required/>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <p>Upload a picture</p>
+                  <input type="file" id="file" name="image"><br>
+                  <span>* Max allowed file size is 2MB</span>
+                  <br><br>
+                </p>
+              </div>
+              <div class="form-floating mb-3">
+                <p>
+                  <label for="details" placeholder="Event Details" required >Details</label>
+                </p>
+                <p>
+                  <textarea
+                    rows="5"
+                    id="details"
+                    name="details"
+                    class="form-control"
+                  ><%= event.details%></textarea>
+                </p>
+              </div>
+              </table>
+              <input class="btn btn-primary btn-lg btn btn-success" type="submit" value="Submit" />
+            </form>
+          </div>
+        
+      </div>
+    </section>
+  <section class="page-section" id="contact">
+
+new form
+<!-- <div class="fieldset">
+  <h4 class="newEventTitle">Edit the event!!!</h4>
+  <form action="/events/<%= event.id%>?_method=PUT" method="POST" class="new-form" 
+    >
+    <table>
+      <p>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="<%= event.title%>"required />
+      </p>
+      <p>
+        <label for="location">Location</label>
+        <input type="text" id="title" name="location" value="<%= event.location%>" required/>
+      </p>
+      <p>
+        <label for="category">Event Type</label>
+        <select name="category" id="category"required>
+          <option value="Tournament">Tournament</option>
+          <option value="Development Course">Development Course</option>
+        </select>
+      </p>
+      <p>
+        <label for="requiredRank">Required Rank</label>
+        <select name="requiredRank" id="requiredRank"required>
+          <option value="Herald">Herald</option>
+          <option value="Guardian">Guardian</option>
+          <option value="Crusader">Crusader</option>
+          <option value="Archon">Archon</option>
+          <option value="Legend">Legend</option>
+          <option value="Ancient">Ancient</option>
+          <option value="Divine">Divine</option>
+          <option value="Immortal">Immortal</option>
+        </select>
+      </p>
+      <p>
+        <label for="startTime" id="startTime" required >Start Time</label>
+        <input type="datetime-local" id="startTime" name="startTime" value="<%event.startTime%>" required/>
+        <p>Current Start Time: <%event.startTime%></p>
+      </p>
+      <p>
+        <label for="endTime" id="endTime" required>End Time</label>
+        <input type="datetime-local" id="endTime" name="endTime" value="<%event.endTime%>" required/>
+        <p>Current End Time: <%event.endTime%></p>
+      </p>
+      <p>
+        <label for="details" placeholder="Event Details">details</label>
+      </p>
+      <p>
+        <textarea
+          rows="5"
+          id="details"
+          name="details"
+          class="fixed-width"
+          required 
+        ><%= event.details%></textarea>
+      </p>
+    </table>
+    <input type="submit" value="Submit" />
+  </form>
+</div> -->
+<%- include('../partials/footer.ejs')%>

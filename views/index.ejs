@@ -1,0 +1,520 @@
+<%- include('./partials/header.ejs')%>
+<body id="page-top">
+  <
+  <!-- Masthead-->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <!-- Masthead Avatar Image-->
+      <img
+        class="masthead-avatar mb-5"
+        src="assets/img/avataaars.svg"
+        alt="..."
+      />
+      <!-- Masthead Heading-->
+      <h1 class="masthead-heading text-uppercase mb-0">
+        Charlotte Dota 2!!!
+      </h1>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <image src ="/images/UNCCDota2.jpg">
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- Masthead Subheading-->
+      <p class="masthead-subheading font-weight-light mb-0">
+        Community - Fun - Respect - Dota
+      </p>
+    </div>
+  </header>
+  <!-- Portfolio Section-->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+      <!-- Portfolio Section Heading-->
+      <h2
+        class="page-section-heading text-center text-uppercase text-secondary mb-0"
+      >
+        2023-2024 UNCC Team Roster!!!
+      </h2>
+      <h4 class="masthead-subheading font-weight-light mb-0 text-center">
+        Click on a team member to learn about them!
+      </h4>
+      <!-- Icon Divider-->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- Portfolio Grid Items-->
+      <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal1"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <image  class="img-fluid" alt="..." src = "/images/BenZhu.jpg">
+          </div>
+        </div>
+        <!-- Portfolio Item 2-->
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal2"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <image class="img-fluid" alt="..." src = "/images/andy111.jpg">
+          </div>
+        </div>
+        <!-- Portfolio Item 3-->
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal3"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <image  class="img-fluid" alt="..." src = "/images/Noelle.jpg">
+          </div>
+        </div>
+        <!-- Portfolio Item 4-->
+        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal4"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/rizzi.jpg"
+                  alt="..."
+                />
+          </div>
+        </div>
+        <!-- Portfolio Item 5-->
+        <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal5"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+                <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/Spacey.jpg"
+                  alt="..."
+                />
+          </div>
+        </div>
+        <!-- Portfolio Item 6-->
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="portfolio-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#portfolioModal6"
+          >
+            <div
+              class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div
+                class="portfolio-item-caption-content text-center text-white"
+              >
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/marcLevin.jpg"
+                  alt="..."
+                />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Modals-->
+  <!-- Portfolio Modal 1-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal1"
+    tabindex="-1"
+    aria-labelledby="portfolioModal1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Benjamin Zhu
+                </h2>
+                <p class="mb-4">President, Position 1</p>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <image src = "/images/BenZhu.jpg">
+                <!-- Portfolio Modal - Text-->
+                <p class="img-fluid rounded mb-5" class="mb-4" alt="...">
+                  <br>
+                  Meet Benjamin Zhu, a junior at the University of North Carolina at Charlotte. He has a passion for cooking, knife collecting, and Dota 2. Renowned for his aggressive playstyle, Ben's eagerness to initiate team fights and hunt for kills has made him a prominent figure in the Dota community. Zhu's famous "Triple Rampage" match as Drow Ranger has solidified his spot in the UNCC Dota 2 hall of fame. This game is often referred to as the greatest performance by a UNCC player as he lead the team to a 52-51 comeback victory against Georgia Tech's superteam. His enduring friendship with Andrew Lam has forged a fearless duo in the Dota 2 arena, captivating audiences with their explosive playstyles and entertaining combos. As a third year veteran, Ben looks forward to making a greater impact in the Dota 2 arena. With the world's eyes upon him this season, Zhu will look to continue his reign of terror in the safe lane.
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 2-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal2"
+    tabindex="-1"
+    aria-labelledby="portfolioModal2"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Andrew Lam
+                </h2>
+                <p class="mb-4">Events Coordinator, Position 5</p>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <image src = "/images/andy111.jpg">
+                <p class="img-fluid rounded mb-5" class="mb-4" alt="...">
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-4">
+                    Meet Andrew Lam, a Chinese-American senior at the University of North Carolina at Charlotte (UNCC). Andrew is a multi-talented individual with a passion for Dota 2, sports and a love for Jesus. As a Bible study leader at the M28 campus ministry, he guides and supports his peers spiritually. On the athletic front, Andrew shines as a star defensive player for the Charlotte Skyrise Ultimate team, showcasing his skill and dedication. He also founded the Charlotte Pokemon Go Club, fostering a vibrant gaming community. Andrew is a seasoned vet that fits nicely into his support role with the team. His aggressive spell casting is great at generating advantages for his team early on and often leads to wins.  With numerous accomplishments and a fun-loving, energetic personality, Andrew is well-loved by his communities. He aims to contribute to the growth and inclusivity of the club, fostering competitiveness and a welcoming environment.  
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 3-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal3"
+    tabindex="-1"
+    aria-labelledby="portfolioModal3"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Noelle Nguyen
+                </h2>
+                <p class="mb-4">Team Captain, Position 2</p>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <image  class="img-fluid" alt="..." src = "/images/Noelle.jpg">
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-4">
+                  
+Meet Noelle Nguyen, an Asian-American senior at the University of North Carolina at Charlotte (UNCC) with a vibrant range of interests. Noelle is an avid player of Dota and League of Legends, spending quality time with friends at VSA (Vietnamese Student Association) and bonding with her little brother through video games. Her enthusiasm extends to K-pop and K-dramas, where she immerses herself in the captivating world of Korean entertainment. Noelle also indulges in her love for anime and enjoys exploring diverse culinary delights. Noelle brings a dynamic presence to the Dota arena with her precise micromovement. Noelle is the most experienced out of the 5 on this team and it shows on the playing field. She often leads her team in many categories which include her KDA and GPM. Noelle's leadership is crucial, especially late in games where her calls can mean the difference in a match. She leads with confidence, always keeping calm in the face of pressure.
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 4-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal4"
+    tabindex="-1"
+    aria-labelledby="portfolioModal4"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Anthony Rizzi
+                </h2>
+                <p>Communications Officer, Position 3</p>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/rizzi.jpg"
+                  alt="..."
+                />
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-4">
+                    Meet Anthony Rizzi, a senior majoring in computer science at the University of North Carolina at Charlotte (UNCC). Already a well-known figure within the Overwatch 2 community, Anthony aims to bring his supportive and defensive gameplay style to the Dota 2 arena. The UNCC Dota 2 team eagerly awaits his services, recognizing the value he can bring. While Anthony is still gaining experience to solidify his spot on the team, the Rizzler has already demonstrated great promise during scrimmages against App State and UNCW's teams. The world eagerly watches as rookies Anthony Rizzi and Spacey Brozowski evolve into cornerstones of the UNCC Dota 2 team. Beyond gaming, Anthony is a skilled player of billiards, with Galaga being his favorite game.
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 5-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal5"
+    tabindex="-1"
+    aria-labelledby="portfolioModal5"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Spacey Brozowski
+                </h2>
+                <p> Secretary, Position 4
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/Spacey.jpg"
+                  alt="..."
+                />
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-4">
+                    Introducing Spacey Brozowski, a rising junior majoring in computer science at the University of North Carolina at Charlotte (UNCC). With exceptional programming skills, Spacey thrives in competitive environments that challenge his abilities. As an avid Cookie Clicker expert and Overwatch 2 master, Spacey displays a deep understanding of competition and strategy. Emerging as a promising rookie, his potential for a high skill ceiling is evident. The UNCC Dota 2 esports team is fortunate to have Spacey, and his development is greatly accelerated by coach Marc Levin. With experience, experts predict that Spacey will become a top player, delivering an explosive style of gameplay to the team. Keep a close watch on this rising star as he makes his mark on UNCC Dota 2.
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Modal 6-->
+  <div
+    class="portfolio-modal modal fade"
+    id="portfolioModal6"
+    tabindex="-1"
+    aria-labelledby="portfolioModal6"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button
+            class="btn-close"
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                >
+                  Marc Levin
+                </h2>
+                <p>Treasurer, Coach</p>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image-->
+                <img
+                  class="img-fluid rounded mb-5"
+                  src="/images/marcLevin.jpg"
+                  alt="..."
+                />
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-4">
+                    Meet Marc Levin, a Japanese-American alumn at the University of North Carolina at Charlotte (UNCC) who has left a remarkable impact on campus. Marc's commitment to academia and extracurricular activities is evident through his active participation in Mock Trial and Model UN, earning him several prestigious awards. Alongside his accomplishments, Marc finds joy in playing Dota 2 and Tears of the Kingdom. Renowned as an exceptional coach, he guides both seasoned players and newcomers to enhance their skills. Known as the "glue" of the Dota 2 esports team at UNCC, Marc's intelligence and unparalleled strategic prowess make him an invaluable asset. As he embarks on new endeavors, Marc's legacy at UNCC will undoubtedly continue to make waves.
+                </p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">
+                  <i class="fas fa-xmark fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<%- include('./partials/footer.ejs')%>

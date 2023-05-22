@@ -1,0 +1,82 @@
+<%- include('../partials/header.ejs')%>
+<div class="content">
+  <!-- About Section-->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <!-- About Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-white">
+        Welcome, <%= user.firstName + " " + user.lastName%>
+      </h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- About Section Content-->
+      <div class="row">
+        <div class="col-lg-4 ms-auto">
+          <p class="lead">
+                <!-- RSVP -->
+                <h3>RSVPs</h3>
+                <div class="divider-custom divider-light">
+                  <div class="divider-custom-line"></div>
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-line"></div>
+                </div>
+                <ul>
+              <%if(RSVP.length) {%>
+                <p>Below are your RSVPs</p>
+                <%RSVP.forEach(RSVP => {%>
+                <h4 href="/RSVP/<%= RSVP.event%>" class="eventLink"
+                  ><p class="eventLink"><%= RSVP.event.title%></p></h4>
+                <li class="display-7">RSVP Response: <%= RSVP.response%></li>
+                <%})}%> 
+                </ul>
+          </p>
+        </div>
+        <div class="col-lg-4 me-auto">
+          <p class="lead">
+            <!-- Events -->
+            <h3>Your Events</h3>
+            <div class="divider-custom divider-light">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            </div>
+              <%if(events.length) {%>
+                <p>You have created the following events</p>
+                <%events.forEach(event => {%>
+                <a href="/events/<%= event.id%>" class="eventLink"
+                  ><h4 class="eventLink text-white"><%= event.title%></h4></a>
+                  <!-- Buttons -->
+                <div>
+                  <form>
+                    <button
+                      type="submit"
+                      formmethod="GET"
+                      formaction="/events/<%= event.id%>/edit"
+                      class="btn btn-primary btn-lg btn btn-success"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="submit"
+                      formmethod="POST"
+                      formaction="/events/<%= event.id%>?_method=DELETE"
+                      class="btn btn-primary btn-lg btn btn-danger"
+                    >
+                      Delete
+                    </button>
+                  </form>
+            
+                  <%}); } else {%>
+                  <p>You have not created any events</p>
+                  <%}%>
+                </div>
+            </p>
+      </div>
+    </div>
+  </section>
+</div>
+<%- include('../partials/footer.ejs')%>

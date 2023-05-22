@@ -1,0 +1,83 @@
+<%- include('../partials/header.ejs')%>
+<div class="content">
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <div class="container d-flex align-items-center flex-column">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">
+          Events Page
+        </h2>
+        <h4 masthead-subheading font-weight-light mb-0>
+          Click on a Event to learn about it!
+        </h4>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+      </div>
+      <!-- About Section Content-->
+      <div class="row">
+        <div class="col-lg-4 me-auto">
+            <h3>Tournaments<h3>
+              <ul>
+              <!-- Icon Divider-->
+            <%if(events.length) {%> <%events.forEach(event=>{%> <%if(
+            event.category == "Tournament"){%>
+                <a href="/events/<%= event.id%>" 
+                  ><li class = "text-white"><%= event.title%></li></a
+                ><br>
+                    <img
+                      class="eventImg"
+                      alt="NO picture provided"
+                      src="<%= event.image%>"
+                      style="width: 100%"
+                    />
+                    <br> <br>
+            <%}%> <%}); } else {%>
+            <h4>There are no events to display.</h4>
+            <%}%>
+            </ul>
+        </div>
+        
+        <div class="col-lg-4 me-auto">
+          <p class="lead">
+                  <!-- //Development Course -->
+                  <h3>Development Course</h3>
+                  <ul>
+              <%if(events.length) {%> <%events.forEach(event=>{%> <%if( event.category
+              == "Development Course"){%>
+                <a href="/events/<%= event.id%>" 
+                  ><li class = "text-white header-6"><%= event.title%></li></a
+                ><br>
+                  <img
+                  class="eventImg"
+                  alt="NO picture provided"
+                  src="<%= event.image%>"
+                  style="width: 100%"
+                  />
+                  <br> <br> <br>
+              <%}%> <%}); } else {%>
+              <h4>There are no events to display.</h4>
+
+              <%}%>
+              </ul>
+          </p>
+        </div>
+      </div>
+      <!-- About Section Button-->
+      <div class="text-center mt-4">
+        <a
+          class="btn btn-xl btn-outline-light"
+          href="https://www.dota2.com/home"
+        >
+          <i class="fas fa-download me-2"></i>
+          Download Dota 2
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+<%- include('../partials/footer.ejs')%>

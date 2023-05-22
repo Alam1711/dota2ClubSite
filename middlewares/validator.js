@@ -1,0 +1,79 @@
+const { body } = require("express-validator");
+const { validationResult } = require("express-validator");
+
+exports.validateId = (req, res, next) => {
+  let id = req.params.id;
+  //an objectId is a 24-bit Hex string
+  if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+    let err = new Error("Invalid event id");
+    err.status = 400;
+    return next(err);
+  } else {
+    return next();
+  }
+};
+
+exports.validateSignUp = [
+  body("firstName", "First name cannot be empty").notEmpty().trim().escape(),
+  body("lastname", "Last name cannot be empty").notEmpty().trim().escape(),
+  body("email", "Email must be a valid email address")
+    .isEmail()
+    .trim()
+    .escape()
+    .normalizeEmail(),
+  body(
+    "password",
+    "Password must be at least 8 characters and at most 64 characters"
+  ).isLength({ min: 8, max: 64 }),
+];
+
+exports.validateLogin = [
+  body("email", "Email must be a valid email address")
+    .isEmail()
+    .trim()
+    .escape()
+    .normalizeEmail(),
+  body(
+    "password",
+    "Password must be at least 8 characters and at most 64 characters"
+  ).isLength({ min: 8, max: 64 }),
+];
+
+exports.validateResult = (req, res, next) => {
+  let errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    errors.array().forEach((error) => {
+      req.flash("error", error.msg);
+    });
+    return res.render("back");
+  }
+};
+
+exports.validateEvent = [
+  body("title", "Email must be a valid title").notEmpty().trim().escape(),
+  body("content", "Content must be min length of 10")
+    .isLength({ min: 10 })
+    .trim()
+    .escape(),
+];
+
+exports.validateDates = [
+  body("startTime", "Date must be a valid date")
+    .notEmpty()
+    .isISO8601()
+    .trim()
+    .escape()
+    .isAfter(),
+  body("start").custom((value, { req }) => {
+    if (Date.parse(end) <= Date.parse(start)) {
+      throw new Error("End date is before start date.");
+    }
+    return true;
+  }),
+  body("endTime", "Date must be a valid date")
+    .notEmpty()
+    .isISO8601()
+    .trim()
+    .escape()
+    .isAfter(),
+];
